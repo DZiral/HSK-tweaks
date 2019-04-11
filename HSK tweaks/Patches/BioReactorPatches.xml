@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+<Operation Class="PatchOperationRemove">
+    <xpath>/Defs/ThingDef[defName = "BioReactor" or defName = "BioReactorCircleLarge" or defName = "BioReactorCircleEX" or defName = "BioReactorBig" or defName = "BioReactorEx"]/costList/Steel</xpath>
+</Operation>
+
+
+<!-- 2X2 Size -->
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "BioReactor"]</xpath>
+        <value>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>120</costStuffCount>
+		</value>
+</Operation>
+
+
+<!-- 3X3 Size -->
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "BioReactorCircleLarge"]</xpath>
+        <value>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>240</costStuffCount>
+		</value>
+</Operation>
+
+
+<!-- 4X4 Size -->
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "BioReactorCircleEX"]</xpath>
+        <value>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>360</costStuffCount>
+		</value>
+</Operation>
+
+
+<!-- 3X3 Size Square -->
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "BioReactorBig"]</xpath>
+        <value>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>240</costStuffCount>
+		</value>
+</Operation>
+
+
+<!-- 4X4 Size Square -->
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "BioReactorEx"]</xpath>
+        <value>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>360</costStuffCount>
+		</value>
+</Operation>
+
+
+</Patch>
