@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+<!--All Yorha apparels look like Yorha Battle Armor-->
+
+<!-- Do not touch icon
+<Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Apparel_Yorhac"]/graphicData/texPath</xpath>
+    <value>
+        <texPath>Things/Pawn/Humanlike/Apparel/Yorha_battle/Yorha</texPath>
+    </value>
+</Operation>
+-->
+
+<!--Change worn texture Yotha casual to Yorha battle-->
+<Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Apparel_Yorhac"]/apparel/wornGraphicPath</xpath>
+    <value>
+        <wornGraphicPath>Things/Pawn/Humanlike/Apparel/Yorha_battle/Yorha</wornGraphicPath>
+    </value>
+</Operation>
+
+
+<!--Yorha Battle Armor craft in Electric tailor bench-->
+
+<Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Apparel_Yorhab"]/recipeMaker/recipeUsers</xpath>
+    <value>
+		<li>ElectricTailoringBench</li>
+    </value>
+
+</Operation>
+
+
+
+</Patch>
