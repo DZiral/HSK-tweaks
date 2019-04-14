@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+<!-- DropFixer constants -->
+<!-- 0.00 - 1.00 Chance to instant destroy ammo while looting -->
+<Operation Class="PatchOperationReplace">
+    <xpath>Defs/SK.Config[defName="Config"]/ChanceToInstantDestroyAmmo</xpath>
+    <value>
+        <ChanceToInstantDestroyAmmo>0</ChanceToInstantDestroyAmmo>
+    </value>
+</Operation>
+
+<!-- 0.00 - 1.00 Chance to instant destroy item (weapon) while looting -->
+<Operation Class="PatchOperationReplace">
+    <xpath>Defs/SK.Config[defName="Config"]/ChanceToInstantDestroyEnemyItem</xpath>
+    <value>
+        <ChanceToInstantDestroyEnemyItem>0</ChanceToInstantDestroyEnemyItem>
+    </value>
+</Operation>
+    
+<!-- 0.00 - 1.00 Chance to damage looted item by deterioration -->
+<Operation Class="PatchOperationReplace">
+    <xpath>Defs/SK.Config[defName="Config"]/ChanceToDamageEnemyItem</xpath>
+    <value>
+        <ChanceToDamageEnemyItem>0</ChanceToDamageEnemyItem>
+    </value>
+</Operation>
+
+
+<!-- 0 - 100 Item take a deterioration damage -->
+<Operation Class="PatchOperationReplace">
+    <xpath>Defs/SK.Config[defName="Config"]/MinAmountDeterioration</xpath>
+    <value>
+        <MinAmountDeterioration>0</MinAmountDeterioration>
+    </value>
+</Operation>
+
+<!-- 0 - 100. Should be bigger then Min value. -->
+<Operation Class="PatchOperationReplace">
+    <xpath>Defs/SK.Config[defName="Config"]/MaxAmountDeterioration</xpath>
+    <value>
+        <MaxAmountDeterioration>0</MaxAmountDeterioration>
+    </value>
+</Operation>
+
+</Patch>
