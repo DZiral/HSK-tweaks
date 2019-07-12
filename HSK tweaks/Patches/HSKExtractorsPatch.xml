@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Вечные экстракторы -->
+
+<Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef[defName = "Extractor"]/comps/li[@Class="CompProperties_LifespanDebris"]</xpath>
+</Operation> 
+
+<Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThingDef[defName = "RareExtractor"]/comps/li[@Class="CompProperties_LifespanDebrisRare"]</xpath>
+</Operation> 
+
+</Patch>
