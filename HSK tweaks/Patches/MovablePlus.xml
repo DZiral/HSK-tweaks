@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- electric smelting furnace -->
+
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "ElectricSmelter"]</xpath>
+        <value>
+			<minifiedDef>MinifiedThing</minifiedDef>
+		</value>
+</Operation>
+
+<!-- electric arc furnace -->
+
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "EAF"]</xpath>
+        <value>
+			<minifiedDef>MinifiedThing</minifiedDef>
+		</value>
+</Operation>
+
+
+</Patch>
+
