@@ -1,24 +1,70 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-<!-- electric smelting furnace -->
 
 <Operation Class="PatchOperationAdd">
-    <xpath>/Defs/ThingDef[defName = "ElectricSmelter"]</xpath>
+    <xpath>/Defs/ThingDef[defName = "ElectricSmelter" or defName = "EAF"]</xpath>
         <value>
 			<minifiedDef>MinifiedThing</minifiedDef>
+			<thingCategories>
+				<li>BuildingsProduction</li>
+			</thingCategories>
 		</value>
 </Operation>
 
-<!-- electric arc furnace -->
 
+<Operation Class="PatchOperationSequence">
+  <success>Always</success>
+  <operations>
+    <li Class="PatchOperationTest">
+      <xpath>/Defs/ThingDef[defName = "ElectricSmelter" or defName = "EAF"]/statBases/Mass</xpath>
+      <success>Invert</success>
+    </li>
+    <li Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName = "ElectricSmelter" or defName = "EAF"]/statBases</xpath>
+      <value>
+        <Mass>1</Mass>
+      </value>
+    </li>
+  </operations>
+</Operation>
+
+<!--
+
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName = "ElectricSmelter" or defName = "EAF"]/statBases</xpath>
+        <value>
+			<Mass>1</Mass>
+		</value>
+</Operation>
+
+-->
+
+<!-- electric arc furnace -->
+<!--
 <Operation Class="PatchOperationAdd">
     <xpath>/Defs/ThingDef[defName = "EAF"]</xpath>
         <value>
 			<minifiedDef>MinifiedThing</minifiedDef>
+			<thingCategories>
+				<li>BuildingsProduction</li>
+			</thingCategories>
 		</value>
 </Operation>
+-->
 
+<!-- all WorkTables -->
+<!--
+<Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[@Name = "WorkTable"]</xpath>
+        <value>
+			<minifiedDef>MinifiedThing</minifiedDef>
+			<thingCategories>
+				<li>BuildingsProduction</li>
+			</thingCategories>
+		</value>
+</Operation>
+-->
 
 </Patch>
 
